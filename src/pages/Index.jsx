@@ -87,12 +87,14 @@ const Index = () => {
               ))}
             </TableBody>
           </Table>
-          <Button onClick={handleAddRow} className="mt-4">
-            Add Row
-          </Button>
-          <CSVLink data={csvData} headers={headers} filename={fileName} className="mt-4">
-            <Button>Download CSV</Button>
-          </CSVLink>
+          <div className="flex space-x-4 mt-4">
+            <Button onClick={handleAddRow}>
+              Add Row
+            </Button>
+            <CSVLink data={csvData} headers={headers} filename={fileName}>
+              <Button>Download CSV</Button>
+            </CSVLink>
+          </div>
         </>
       )}
     </div>
